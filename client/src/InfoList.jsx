@@ -60,6 +60,6 @@ var InfoListElement = (props) => {
       </div>
     );
   }
-}
+};
 
 export {InfoList, InfoListElement, OpeningHours};

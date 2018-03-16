@@ -8,7 +8,7 @@ export var MapContainer = (props) => (
       style={{
         height: '320px',
         width: '280px'
-       }} >
+      }} >
       <Marker position={props.geometry.location}
         icon="http://res.cloudinary.com/madlicorice/image/upload/v1520470825/map_icon_small.png"
       />
@@ -17,5 +17,6 @@ export var MapContainer = (props) => (
 );
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyAZeaxvjPuMA8T8pyjr7Fkld8zLYgtn8Mo'
+  // apiKey: 'AIzaSyAZeaxvjPuMA8T8pyjr7Fkld8zLYgtn8Mo'
+  apiKey: 'AIzaSyAWkOh-a_hg8hnUK0HDejlJI11gf1fjdEU'
 })(MapContainer);

@@ -43,12 +43,17 @@
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "express": "^4.16.2",
+    "faker": "^4.1.0",
     "google-maps-react": "^1.1.2",
     "jquery": "^3.3.1",
     "mongoose": "^5.0.6",
     "morgan": "^1.9.0",
+    "pg": "^7.4.1",
+    "pg-hstore": "^2.3.2",
+    "ramda": "^0.25.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "sequelize": "^4.37.0",
     "underscore": "^1.8.3"
   },
   "jest": {}
