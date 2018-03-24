@@ -54,7 +54,7 @@ class OpeningHours extends React.Component {
     if (weekdayNow === -1) {
       weekdayNow = 6;
     }
-    var range = this.props.info.data.weekday_text[weekdayNow].split(': ')[1];
+    var range = this.props.info.data.weekdayText[weekdayNow].split(': ')[1];
     var time1;
     var time2;
     if (range.includes(', ')) {
@@ -97,7 +97,7 @@ class OpeningHours extends React.Component {
           </div>
         </div>
         <div className="sidebar-flexbox-col sidebar-periods" style={ this.state.showPeriods ? {display: 'flex'} : {'display': 'none'}}>
-          <Periods weekdayText={this.props.info.data.weekday_text}/>
+          <Periods weekdayText={this.props.info.data.weekdayText}/>
         </div>
       </div>
     );

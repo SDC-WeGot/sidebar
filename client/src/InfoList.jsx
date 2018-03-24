@@ -5,19 +5,19 @@ import { OpeningHours } from './OpeningHours.jsx';
 var InfoList = (props) => {
   var info = {
     openingHours: {
-      data: props.restaurant.opening_hours,
+      data: props.restaurant.openingHours,
       icon: 'fas fa-clock fa-lg',
       link: {url: null, newTab: false}
     },
     address: {
-      text: props.restaurant.formatted_address,
+      text: props.restaurant.formattedAddress,
       icon: 'fas fa-map-marker-alt fa-lg',
       link: {url: null, newTab: false}
     },
     phone: {
-      text: props.restaurant.international_phone_number,
+      text: props.restaurant.internationalPhoneNumber,
       icon: 'fas fa-phone fa-lg',
-      link: {url: 'tel:' + props.restaurant.international_phone_number, newTab: false}
+      link: {url: 'tel:' + props.restaurant.internationalPhoneNumber, newTab: false}
     },
     website: {
       text: (new URL(props.restaurant.website)).hostname,
@@ -33,6 +33,7 @@ var InfoList = (props) => {
 
   return (
     <div className="sidebar-flexbox-col sidebar-info-list">
+      {console.log(props)}
       <OpeningHours info={info.openingHours} />
       <InfoListElement info={info.address} />
       <InfoListElement info={info.phone} />
