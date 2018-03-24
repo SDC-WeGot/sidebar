@@ -1,3 +1,4 @@
+//require('newrelic');
 var express = require('express');
 var app = express();
 
@@ -10,7 +11,7 @@ var restaurantsApiRouter = require('./routers/restaurants_api.js');
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(morgan('tiny'));
+// app.use(morgan('tiny'));
 
 app.options((req, res) => {
   res.send('OK');
