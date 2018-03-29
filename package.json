@@ -7,10 +7,16 @@
     "database": "mongod",
     "seed-database": "node db/controllers/seed_database.js",
     "test": "jest",
+    "fred-server": "nodemon ssrServer/server.js",
+    "build": "webpack --config webpack.config.js --watch",
     "react-dev": "webpack --watch",
-    "start": "node server/index.js",
+    "start": "nodemon server/index.js",
     "docker-start": "DATABASE_HOST=database node db/controllers/seed_database.js && DATABASE_HOST=database node server/index.js",
-    "server-dev": "nodemon server/index.js"
+    "server-dev": "nodemon server/index.js",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:build-server": "webpack --config webpack.server.js --watch",
+    "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
+    "dev:build-client": "webpack --config webpack.client.js --watch"
   },
   "repository": {
     "type": "git",
@@ -25,9 +31,13 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-preset-env": "1.6.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-es2017": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
     "css-loader": "^0.28.10",
+    "compression": "1.7.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
@@ -36,12 +46,17 @@
     "nodemon": "^1.17.1",
     "sinon": "^4.4.2",
     "style-loader": "^0.20.2",
-    "webpack": "^3.11.0"
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "2.8.2",
+    "webpack-merge": "4.1.0",
+    "webpack-node-externals": "1.6.0"
   },
   "dependencies": {
     "artillery": "^1.6.0-14",
     "axios": "^0.18.0",
     "bluebird": "^3.5.1",
+    "concurrently": "3.5.0",
+    "express-http-proxy": "1.0.6",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "express": "^4.16.2",

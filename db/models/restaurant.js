@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-databaseHost = process.env.DATABASE_HOST || 'localhost';
-var db = mongoose.connect('mongodb://' + databaseHost + '/wegot-sidebar');
+//databaseHost = process.env.DATABASE_HOST || 'localhost';
+
+var db = mongoose.connect('mongodb://' + 'localhost' + '/wegot-sidebar');
 
 var restaurantSchema = mongoose.Schema({
   placeId: { type: Number, index: true },
