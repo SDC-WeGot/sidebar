@@ -6,7 +6,7 @@ router.get('/:id/sidebar', (req, res) => {
   
   var restaurantId = req.params.id;
   getRestaurantById(restaurantId).then((result) => {
-    
+    // console.log(result);
     res.send(result);
   });
 });

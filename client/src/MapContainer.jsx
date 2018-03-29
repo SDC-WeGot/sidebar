@@ -3,6 +3,7 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 export var MapContainer = (props) => (
   <div className="sidebar-map-container">
+  {console.log(props, "yo im props")}
     <Map google={props.google} zoom={16}
       initialCenter={props.geometry.location}
       style={{

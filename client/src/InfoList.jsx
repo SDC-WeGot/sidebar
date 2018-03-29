@@ -33,7 +33,7 @@ var InfoList = (props) => {
 
   return (
     <div className="sidebar-flexbox-col sidebar-info-list">
-      {console.log(props)}
+      {console.log(props, '')}
       <OpeningHours info={info.openingHours} />
       <InfoListElement info={info.address} />
       <InfoListElement info={info.phone} />

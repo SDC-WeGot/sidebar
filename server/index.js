@@ -22,8 +22,9 @@ app.options((req, res) => {
 app.use(express.static('client/dist'));
 
 
+
 app.get('/app.js', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public'));
+  res.sendFile(path.join(__dirname, '../client/dist'));
   //res.sendFile(path.resolve('../public/app.js'));
   //app.use(express.static(path.join(__dirname, '../public')));
 });

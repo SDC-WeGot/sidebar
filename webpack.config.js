@@ -22,7 +22,7 @@ const common = {
     ],
   },
 };
-//console.log(__dirname, "LPLPLPLPLPLPLPLPLPLPLPLPLPLPLPLLPLPLPLPLPL")
+
 const client = {
   entry: './client.js',
   output: {

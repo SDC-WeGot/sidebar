@@ -4,6 +4,8 @@ data/
 #webpack output
 bundle.js
 bundle.js.map
+app.js
+app-server.js
 
 # Logs
 logs
